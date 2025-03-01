@@ -1,5 +1,7 @@
 mod front_of_house {
+  // pub keyword makes the module public
     pub mod hosting {
+      // pub keyword makes the function public
         pub fn add_to_waitlist() {
             println!("add_to_waitlist");
         }
@@ -24,7 +26,8 @@ mod front_of_house {
 }
 
 pub fn eat_at_restaurant() {
-    // Absolute path
+    // Absolute path - prefer this over relative paths,
+    // assume you are more likely going to move code around
     crate::front_of_house::hosting::add_to_waitlist();
 
     // Relative path
